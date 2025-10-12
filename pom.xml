@@ -16,7 +16,6 @@
     </properties>
     <modules>
         <module>rest-project</module>
-        <module>test-project</module>
     </modules>
     <dependencyManagement>
         <dependencies>

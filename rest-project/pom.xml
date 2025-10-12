@@ -11,9 +11,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>test-project</artifactId>
-    <name>test-project</name>
-    <description>test project</description>
+    <artifactId>rest-project</artifactId>
+    <name>rest-project</name>
+    <description>rest project</description>
     <packaging>jar</packaging>
 
     <properties>
