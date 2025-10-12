@@ -1,7 +1,7 @@
-package com.demo.rest.service;
+package com.demo.service;
 
-import com.demo.rest.model.User;
-import com.demo.rest.repository.UserRepository;
+import com.demo.model.User;
+import com.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

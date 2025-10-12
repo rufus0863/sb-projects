@@ -1,9 +1,9 @@
-package com.demo.rest.service;
+package com.demo.service;
 
-import com.demo.rest.model.Customer;
-import com.demo.rest.repository.CustomerRepository;
-import com.demo.rest.dto.CustomerRequest;
-import com.demo.rest.dto.CustomerResponse;
+import com.demo.model.Customer;
+import com.demo.repository.CustomerRepository;
+import com.demo.dto.CustomerRequest;
+import com.demo.dto.CustomerResponse;
 import com.demo.exception.ConflictException;
 import com.demo.exception.NotFoundException;
 import org.springframework.stereotype.Service;

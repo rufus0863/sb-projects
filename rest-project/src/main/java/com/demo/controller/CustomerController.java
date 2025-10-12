@@ -1,8 +1,8 @@
-package com.demo.rest.controller;
+package com.demo.controller;
 
-import com.demo.rest.service.CustomerService;
-import com.demo.rest.dto.CustomerRequest;
-import com.demo.rest.dto.CustomerResponse;
+import com.demo.service.CustomerService;
+import com.demo.dto.CustomerRequest;
+import com.demo.dto.CustomerResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

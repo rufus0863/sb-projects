@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExceptionDemoApplication {
+public class RestProjectDemoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ExceptionDemoApplication.class, args);
+        SpringApplication.run(RestProjectDemoApplication.class, args);
     }
 }

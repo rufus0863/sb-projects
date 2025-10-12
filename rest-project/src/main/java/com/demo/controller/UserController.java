@@ -1,7 +1,7 @@
-package com.demo.rest.controller;
+package com.demo.controller;
 
-import com.demo.rest.model.User;
-import com.demo.rest.service.UserService;
+import com.demo.model.User;
+import com.demo.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

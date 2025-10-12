@@ -1,7 +1,7 @@
-package com.demo.rest.service;
+package com.demo.service;
 
-import com.demo.rest.dto.CustomerRequest;
-import com.demo.rest.dto.CustomerResponse;
+import com.demo.dto.CustomerRequest;
+import com.demo.dto.CustomerResponse;
 
 import java.util.List;
 

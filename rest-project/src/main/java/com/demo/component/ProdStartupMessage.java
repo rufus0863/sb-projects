@@ -1,4 +1,4 @@
-package com.demo.rest.component;
+package com.demo.component;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
