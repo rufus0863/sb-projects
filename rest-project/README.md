@@ -1,14 +1,14 @@
 # RESTful Project
 
 This project demonstrates the implementation of a **RESTful API** using standard design principles and best practices.  
-It covers key concepts such as request handling, parameter management, and error handling, ensuring a clean and maintainable architecture.
+It covers concepts listed below ensuring a clean and maintainable architecture.
 
 - Controllers 
 - Request mappings 
 - Request parameters 
 - Path variables 
-- Reqeust body 
-- Exception handling 
+- Request body 
+- Validations and Exception handling 
 - API documentation
 ---
 

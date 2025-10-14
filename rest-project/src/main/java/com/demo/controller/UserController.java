@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@Tag(name = "User Management", description = "Operazioni CRUD per la gestione degli utenti")
+@Tag(name = "Users", description = "CRUD operations for user management")
 public class UserController {
 
   private final UserService userService;
@@ -28,12 +28,12 @@ public class UserController {
   }
 
   @Operation(
-      summary = "Recupera tutti gli utenti",
-      description = "Restituisce la lista completa degli utenti presenti nel sistema"
+      summary = "Retrieve all users",
+      description = "Returns the complete list of users in the system"
   )
   @ApiResponse(
       responseCode = "200",
-      description = "Lista degli utenti recuperata con successo",
+      description = "User list successfully retrieved",
       content = @Content(mediaType = "application/json",
           schema = @Schema(implementation = User.class))
   )
@@ -43,18 +43,18 @@ public class UserController {
   }
 
   @Operation(
-      summary = "Recupera un utente per ID",
-      description = "Restituisce un singolo utente specificando il suo ID"
+      summary = "Retrieve a user by ID",
+      description = "Returns a single user by specifying their ID"
   )
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "200", description = "Utente trovato",
+      @ApiResponse(responseCode = "200", description = "User found",
           content = @Content(mediaType = "application/json",
               schema = @Schema(implementation = User.class))),
-      @ApiResponse(responseCode = "404", description = "Utente non trovato")
+      @ApiResponse(responseCode = "404", description = "User not found")
   })
   @GetMapping("/{id}")
   public ResponseEntity<User> getById(
-      @Parameter(description = "ID dell'utente da cercare", required = true)
+      @Parameter(description = "ID of the user to search for", required = true)
       @PathVariable Long id) {
     return userService.findById(id)
         .map(ResponseEntity::ok)
@@ -62,37 +62,37 @@ public class UserController {
   }
 
   @Operation(
-      summary = "Crea un nuovo utente",
-      description = "Aggiunge un nuovo utente al sistema"
+      summary = "Create a new user",
+      description = "Adds a new user to the system"
   )
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "201", description = "Utente creato con successo",
+      @ApiResponse(responseCode = "201", description = "User successfully created",
           content = @Content(mediaType = "application/json",
               schema = @Schema(implementation = User.class))),
-      @ApiResponse(responseCode = "400", description = "Richiesta non valida")
+      @ApiResponse(responseCode = "400", description = "Invalid request")
   })
   @PostMapping
   public User create(
-      @Parameter(description = "Dati dell'utente da creare", required = true)
+      @Parameter(description = "Data of the user to create", required = true)
       @RequestBody User user) {
     return userService.create(user);
   }
 
   @Operation(
-      summary = "Aggiorna un utente esistente",
-      description = "Aggiorna i dati di un utente identificato dal suo ID"
+      summary = "Update an existing user",
+      description = "Updates the data of a user identified by their ID"
   )
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "200", description = "Utente aggiornato con successo",
+      @ApiResponse(responseCode = "200", description = "User successfully updated",
           content = @Content(mediaType = "application/json",
               schema = @Schema(implementation = User.class))),
-      @ApiResponse(responseCode = "404", description = "Utente non trovato")
+      @ApiResponse(responseCode = "404", description = "User not found")
   })
   @PutMapping("/{id}")
   public ResponseEntity<User> update(
-      @Parameter(description = "ID dell'utente da aggiornare", required = true)
+      @Parameter(description = "ID of the user to update", required = true)
       @PathVariable Long id,
-      @Parameter(description = "Nuovi dati dell'utente", required = true)
+      @Parameter(description = "New user data", required = true)
       @RequestBody User user) {
     try {
       return ResponseEntity.ok(userService.update(id, user));
@@ -102,16 +102,16 @@ public class UserController {
   }
 
   @Operation(
-      summary = "Elimina un utente",
-      description = "Rimuove un utente dal sistema specificando il suo ID"
+      summary = "Delete a user",
+      description = "Removes a user from the system by specifying their ID"
   )
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "204", description = "Utente eliminato con successo"),
-      @ApiResponse(responseCode = "404", description = "Utente non trovato")
+      @ApiResponse(responseCode = "204", description = "User successfully deleted"),
+      @ApiResponse(responseCode = "404", description = "User not found")
   })
   @DeleteMapping("/{id}")
   public ResponseEntity<Void> delete(
-      @Parameter(description = "ID dell'utente da eliminare", required = true)
+      @Parameter(description = "ID of the user to delete", required = true)
       @PathVariable Long id) {
     userService.delete(id);
     return ResponseEntity.noContent().build();
