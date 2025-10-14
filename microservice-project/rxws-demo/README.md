@@ -10,7 +10,7 @@ It acts as a Tomcat-deployable web application (WAR) that integrates the REST cl
 - Uses `rest-client-tomcat` module to process external requests.
 - Uses `shared-dto` for common data transfer objects.
 
-## Dependencies
+## Components
 - `rest-app-tomcat`
 - `rest-client-tomcat`
 - `rest-server-service`
